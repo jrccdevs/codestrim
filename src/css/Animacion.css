@@ -1,0 +1,90 @@
+body, #main-container { /* O el selector que uses */
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
+}
+
+section {
+    position: relative;
+    z-index: 10;
+    /* ... otros estilos de sección ... */
+}
+
+/* ... otros estilos generales ... */
+
+body::before, #main-container::before { /* Ajusta el selector */
+    content: '';
+    position: fixed;
+    top: -10%;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    pointer-events: none;
+    animation: snowfall 10s linear infinite;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+@keyframes snowfall {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+.snow {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+/* Dark Mode Styles */
+body.dark section, #main-container.dark section { /* Ajusta el selector */
+    color: #f0f0f0;
+    /* ... */
+}
+
+body.dark::before, #main-container.dark::before { /* Ajusta el selector */
+    content: '';
+    position: fixed;
+    top: -10%;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    pointer-events: none;
+    animation: snowfall 10s linear infinite, glitch-lines-dark 0.5s linear infinite;
+    opacity: 0.7;
+    mix-blend-mode: overlay;
+    z-index: 1;
+    background: linear-gradient(to bottom, transparent 0%, rgba(255, 0, 100, 0.1) 20%, rgba(100, 255, 0, 0.1) 80%, transparent 100%);
+}
+
+@keyframes glitch-lines-dark { /* ... */ }
+
+/* Light Mode Styles */
+body:not(.dark) section, #main-container:not(.dark) section { /* Ajusta el selector */
+    color: #33495e;
+    /* ... */
+}
+
+body:not(.dark)::before, #main-container:not(.dark)::before { /* Ajusta el selector */
+    content: '';
+    position: fixed;
+    top: -10%;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    pointer-events: none;
+    animation: snowfall 10s linear infinite;
+    opacity: 0.4;
+    z-index: 1;
+    background: none;
+}

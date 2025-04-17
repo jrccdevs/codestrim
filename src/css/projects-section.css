@@ -1,0 +1,37 @@
+/* src/css/projects-section.css */
+
+.projects-section {
+    padding: 60px 40px;
+    background-color: #fff;
+    color: #333;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .projects-section h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 50px; /* Aumentamos el margen inferior */
+    text-align: left;
+    border-bottom: 3px solid #ddd;
+    padding-bottom: 10px;
+  }
+  
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Establecemos 2 columnas fijas */
+    gap: 30px;
+  }
+  
+  /* Estilos para pantallas más pequeñas (menos de 768px) */
+  @media (max-width: 768px) {
+    .projects-container {
+      grid-template-columns: 1fr; /* Una columna en pantallas más pequeñas */
+    }
+  }
+  
+  .projects-section.dark {
+    background-color: #1a1a1a;
+    color: #eee;
+  }

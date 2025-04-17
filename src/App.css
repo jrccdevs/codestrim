@@ -1,0 +1,21 @@
+/* src/App.css */
+body {
+    font-family: 'Roboto', 'Open Sans', sans-serif; /* Fuente principal */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    min-height: 100vh;
+    margin: 0; /* Aseguramos que no haya márgenes por defecto en el body */
+  }
+  
+.App {
+    transition: background-color 0.3s ease, color 0.3s ease;
+    min-height: 100vh; /* Asegura que el fondo oscuro cubra toda la altura */
+    display: flex; /* Añade esto para que los hijos ocupen toda la altura */
+    flex-direction: column;
+  }
+  
+  .dark {
+    background-color: #121212;
+    color: #eee;
+  }

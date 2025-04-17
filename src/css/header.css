@@ -1,0 +1,319 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 180px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, border-bottom-color 0.3s ease;
+  position: relative; /* Asegúrate de que esté aquí */
+  overflow: hidden; /* Opcional */
+}
+
+.header-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cubre todo el header sin deformar la imagen */
+  /*z-index: -1;  Coloca la imagen detrás del contenido */
+}
+
+.header-dark {
+  background-color: #333;
+  border-bottom-color: #555;
+  color: #eee;
+}
+
+.header-dark .header-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cubre todo el header sin deformar la imagen */
+  z-index: -1; /* Coloca la imagen detrás del contenido */
+  /* Opcional: si quieres una imagen de fondo diferente para el modo oscuro */
+  /* Puedes agregar estilos específicos aquí */
+}
+
+.profile-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin-right: 60px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  position: relative; /* Asegura que esté por encima de la imagen de fondo */
+  z-index: 1;
+}
+
+.header-dark .profile-image {
+  box-shadow: 0 4px 8px rgba(95, 93, 93, 0.1);
+}
+
+.intro {
+  flex-grow: 1;
+  max-width: 600px;
+  text-align: left;
+  transition: color 0.3s ease;
+  position: relative; /* Asegura que esté por encima de la imagen de fondo */
+  z-index: 1;
+}
+
+.header-dark .intro {
+  color: #eee;
+}
+
+.intro h1 {
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: rgb(33, 69, 110);
+  transition: color 0.3s ease;
+  position: relative; /* Asegura que esté por encima de la imagen de fondo */
+  z-index: 1;
+}
+
+.header-dark .intro h1 {
+  color:  rgb(25, 68, 161);
+}
+
+.intro h2 {
+  font-size: 1.5em;
+  color: rgb(58, 73, 105);
+  margin-bottom: 30px;
+  transition: color 0.3s ease;
+  position: relative; /* Asegura que esté por encima de la imagen de fondo */
+  z-index: 1;
+}
+
+.header-dark .intro h2 {
+  color: rgb(117, 178, 248);
+}
+
+.intro p {
+  font-size: 1.1em;
+  color: rgb(58, 73, 105);
+  line-height: 1.6;
+  margin-bottom: 35px;
+  transition: color 0.3s ease;
+  position: relative; /* Asegura que esté por encima de la imagen de fondo */
+  z-index: 1;
+}
+
+.header-dark .intro p {
+  color: rgb(117, 178, 248);
+}
+
+.view-projects-button {
+  background-color: #222;
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  position: relative; /* Asegura que esté por encima de la imagen de fondo */
+  z-index: 1;
+}
+
+.header-dark .view-projects-button {
+  background-color: #555;
+  color: #eee;
+}
+
+.view-projects-button:hover {
+  background-color: #444;
+}
+
+.header-dark .view-projects-button:hover {
+  background-color: #777;
+}
+
+/* Media queries (sin cambios necesarios para la imagen de fondo) */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+  }
+
+  .profile-image {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .intro {
+    max-width: none;
+    text-align: center;
+  }
+
+  .intro h1 {
+    font-size: 2em;
+  }
+
+  .intro h2 {
+    font-size: 1.1em;
+  }
+
+  .intro p {
+    font-size: 0.9em;
+  }
+
+  .view-projects-button {
+    padding: 10px 15px;
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 576px) {
+  .dark-mode-toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header {
+    padding: 30px 20px;
+  }
+
+  .profile-image {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+  }
+
+  .intro h1 {
+    font-size: 1.8em;
+  }
+
+  .intro h2 {
+    font-size: 1em;
+  }
+
+  .intro p {
+    font-size: 0.85em;
+  }
+
+  .view-projects-button {
+    padding: 8px 12px;
+    font-size: 0.85em;
+  }
+}
+
+@media (max-width: 320px) {
+  .header {
+    padding: 20px 15px;
+  }
+
+  .profile-image {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+
+  .intro h1 {
+    font-size: 1.5em;
+  }
+
+  .intro h2 {
+    font-size: 0.9em;
+  }
+
+  .intro p {
+    font-size: 0.8em;
+  }
+
+  .view-projects-button {
+    padding: 6px 10px;
+    font-size: 0.8em;
+  }
+}
+
+/* Estilos del interruptor (sin cambios necesarios) */
+.dark-mode-toggle-container {
+  display: block;
+  align-items: center;
+  margin-bottom: auto;
+  padding-top: 20px;
+  width: 70px;
+}
+
+.dark-mode-toggle-input {
+  display: none; /* Ocultamos el checkbox real */
+}
+
+.dark-mode-toggle-label {
+  position: relative;
+  display: inline-block;
+  width: 63px;
+  height: 35px;
+  background-color: #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode-toggle-label::after {
+  content: '';
+  position: absolute;
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  background-color: white;
+  top: 1px;
+  left: 6px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3); /* Añadimos una pequeña sombra */
+}
+
+.dark-mode-toggle-input:checked + .dark-mode-toggle-label {
+  background-color: rgb(58, 57, 57);
+}
+
+.dark-mode-toggle-input:checked + .dark-mode-toggle-label::after {
+  transform: translateX(20px);
+  background-color: #f7f7f7; /* Un tono ligeramente más claro para el círculo en modo oscuro */
+}
+
+/* Estilos para los iconos dentro del interruptor */
+.dark-mode-toggle-icons {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4px;
+  font-size: 12px; /* Tamaño de los iconos */
+  color: rgb(34, 29, 29); /* Color de los iconos en modo oscuro */
+}
+
+.dark-mode-toggle-icons svg {
+  width: 14px;
+  height: 14px;
+}
+
+.dark-mode-toggle-label[data-mode="dark"] {
+  background-color: #222;
+}
+
+.dark-mode-toggle-label[data-mode="dark"]::after {
+  transform: translateX(20px);
+  background-color: #f7f7f7;
+}
+
+.dark-mode-toggle-label[data-mode="light"] {
+  background-color: rgb(137, 190, 206);
+}
+
+.dark-mode-toggle-label[data-mode="light"]::after {
+  transform: translateX(0);
+  background-color: rgb(8, 107, 238);
+}

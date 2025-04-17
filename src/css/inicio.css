@@ -1,0 +1,36 @@
+/* Inicio.css */
+.inicio-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f4; /* Fondo claro por defecto */
+    font-family: sans-serif;
+    text-align: center;
+    width: auto;
+  }
+  
+  .inicio-container-dark {
+    background-color: #333; /* Un fondo oscuro */
+    color: #fff; /* Opcional: cambiar el color del texto si es necesario */
+  }
+  
+  .inicio-contenido {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .inicio-titulo {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333; /* Color claro por defecto */
+  }
+  
+  /* Estilo para el título en tema oscuro (opcional) */
+  .inicio-container-dark .inicio-titulo {
+    color: #eee;
+  }

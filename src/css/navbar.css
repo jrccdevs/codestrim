@@ -1,0 +1,143 @@
+/* Estilos generales del navbar */
+.navbar {
+    background-color: #f8f9fa; /* Fondo claro por defecto */
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    max-width: none; /* Ya está presente, lo cual es correcto para ocupar todo el ancho */
+    margin-top: 0; /* Elimina el margen superior */
+    width: 100%; /* Asegura que el navbar ocupe el 100% del ancho de su contenedor padre */
+    box-sizing: border-box; /* Incluye el padding en el ancho */
+  }
+  
+  .dark-navbar {
+    background-color: #343a40; /* Fondo oscuro */
+    color: #fff;
+    max-width: none; /* Ya está presente, correcto */
+    /* height: 100%;  Ocupar el 100% del alto no suele ser lo deseado para un navbar horizontal */
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* max-width: 1200px;  Este límite está impidiendo que el contenido interno ocupe todo el ancho */
+    margin: 0 auto;
+    padding: 0 1rem;
+    width: 100%; /* Asegura que el contenedor interno ocupe el ancho del navbar */
+    box-sizing: border-box;
+  }
+  .navbar-brand a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333; /* Color del texto claro */
+    text-decoration: none;
+  }
+  
+  .dark-navbar .navbar-brand a {
+    color: #fff; /* Color del texto oscuro */
+  }
+  
+  /* Estilos para los enlaces de navegación en desktop */
+  .navbar-links-desktop {
+    display: none; /* Oculto por defecto en pantallas pequeñas */
+    align-items: center;
+  }
+  
+  @media (min-width: 768px) {
+    .navbar-links-desktop {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+  
+  .navbar-links-desktop a {
+    color: #555; /* Color del enlace claro */
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .dark-navbar .navbar-links-desktop a {
+    color: #ccc; /* Color del enlace oscuro */
+  }
+  
+  .navbar-links-desktop a:hover {
+    color: #007bff;
+  }
+  
+  .dark-navbar .navbar-links-desktop a:hover {
+    color: #00aaff;
+  }
+  
+  .theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-left: 1rem;
+    color: #555; /* Color del icono claro */
+  }
+  
+  .dark-navbar .theme-toggle {
+    color: #ccc; /* Color del icono oscuro */
+  }
+  
+  /* Estilos para el botón del menú hamburguesa */
+  .navbar-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #555; /* Color del icono claro */
+  }
+  
+  .dark-navbar .navbar-toggle {
+    color: #ccc; /* Color del icono oscuro */
+  }
+  
+  /* Estilos para los enlaces de navegación en mobile */
+  .navbar-links-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f9fa; /* Fondo claro por defecto */
+    border-top: 1px solid #eee;
+    padding: 2rem 0;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dark-navbar .navbar-links-mobile {
+    background-color: #343a40; /* Fondo oscuro */
+    border-top: 1px solid #555;
+  }
+  
+  .navbar-links-mobile a {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: #555; /* Color del enlace claro */
+    transition: color 0.2s ease;
+  }
+  
+  .dark-navbar .navbar-links-mobile a {
+    color: #ccc; /* Color del enlace oscuro */
+  }
+  
+  .navbar-links-mobile a:hover {
+    background-color: #eee;
+  }
+  
+  .dark-navbar .navbar-links-mobile a:hover {
+    background-color: #444;
+  }
+  
+  .navbar-links-mobile .theme-toggle {
+    margin-top: 0.5rem;
+  }
+  
+  /* Media query para mostrar el menú de escritorio y ocultar el botón toggle en pantallas más grandes */
+  @media (min-width: 768px) {
+    .navbar-toggle {
+      display: none;
+    }
+  }

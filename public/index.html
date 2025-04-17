@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>React App</title>
+    <link rel="stylesheet" type="text/css" href="src/css/projects-section.css">
+
+</head>
+<body>
+    <div id="root">
+        <section class="projects-section dark">
+            <h2>Mis Proyectos</h2>
+            <div class="projects-container">
+                </div>
+        </section>
+        <script>
+            function createSnowfallEffect(element, snowflakeCount = 150) {
+                if (!element) {
+                    console.error("Element not found.");
+                    return;
+                }
+
+                for (let i = 0; i < snowflakeCount; i++) {
+                    const snowFlake = document.createElement('div');
+                    snowFlake.className = 'snow';
+                    snowFlake.style.left = Math.random() * 100 + '%';
+                    snowFlake.style.animationDelay = Math.random() * 5 + 's';
+                    snowFlake.style.animationDuration = Math.random() * 5 + 5 + 's';
+                    element.appendChild(snowFlake);
+                }
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                const projectsSection = document.querySelector('.projects-section.dark');
+                if (projectsSection) {
+                    createSnowfallEffect(projectsSection);
+                }
+            });
+        </script>
+    </div>
+</body>
+</html>
