@@ -23,7 +23,7 @@ const projectsData = [
     title: 'Integrated Process System',
     description: 'Integrated Process System is an informative and persuasive digital platform designed to clearly and concisely communicate the benefits, features, and value proposition of a technological solution that seeks to optimize and centralize the management of an organizations workflows and operations.',
     image: Banner, // Reemplaza con la ruta de tu imagen
-    url: 'https://boliviandcode.vercel.app/'
+    url: 'https://codestrim.vercel.app/'
   },
   // Puedes añadir más proyectos aquí
 ];
