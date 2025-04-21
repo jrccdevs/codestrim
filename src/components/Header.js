@@ -1,6 +1,6 @@
 import React from 'react';
 import '../css/header.css';
-import PerfilLight from '../img/perfil3.png'; // Imagen para modo claro
+import PerfilLight from '../img/perfil1.png'; // Imagen para modo claro
 import PerfilDark from '../img/perfil2.png'; // Imagen para modo oscuro
 import Fondo from '../img/fondo.png';
 import { BsSunFill, BsMoonFill } from 'react-icons/bs';

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Header from './components/Header.js';
 import './App.css'; // Si decides mantener este archivo
 import ProjectsSection from './components/ProyectSecction';
-import SkillsSecctions from './components/SkillsSection'
+import SkillsSecctions from './components/Contacto'
 import Animacion from './components/Animancion'
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
       <Animacion />
       <Header onToggleDarkMode={toggleDarkMode} darkMode={darkMode} />
       <ProjectsSection darkMode={darkMode} /> {/* Pasa el prop darkMode */}
-     
+      
       {/* Aquí irán las demás secciones */}
     </div>
   );

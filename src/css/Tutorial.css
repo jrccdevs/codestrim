@@ -1,0 +1,138 @@
+.single-tutorial-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  .single-tutorial-container h1{
+    color: #000;
+  }
+  .title{
+      color: #0e3b6b;
+  }
+  span{
+      
+  }
+  .lesson-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .lesson-navigation button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .lesson-navigation button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .lesson-content h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .lesson-content p {
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .code-editor {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .code-editor textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: 1rem;
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .code-editor button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  .code-editor button:hover {
+    background-color: #1e7e34;
+  }
+  
+  .output-area {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+  }
+  
+  .output-area h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .output-area pre {
+    font-family: monospace;
+    white-space: pre-wrap;
+    word-break: break-word;
+    margin: 0;
+  }
+  
+  .solution-area {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #d9edf7;
+    border-radius: 5px;
+    background-color: #e7f5ff;
+  }
+  
+  .solution-area h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #31708f;
+  }
+  
+  .solution-area pre {
+    font-family: monospace;
+    white-space: pre-wrap;
+    word-break: break-word;
+    margin: 0;
+    color: #31708f;
+  }
+  
+  .lesson-content button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6c757d;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+  }
+  
+  .lesson-content button:hover {
+    background-color: #5a6268;
+  }
