@@ -136,3 +136,41 @@
   .lesson-content button:hover {
     background-color: #5a6268;
   }
+
+  .completion-message {
+  position: fixed; /* Para que flote por encima del contenido */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centrarlo */
+  background-color: rgba(0, 128, 0, 0.8); /* Fondo verde semi-transparente */
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 1000; /* Asegurar que esté por encima de otros elementos */
+  opacity: 1;
+  transition: opacity 2.5s ease-in-out;
+}
+
+/* Opcional: para que desaparezca después de un tiempo */
+.completion-message.fade-out {
+  opacity: 0;
+}
+
+.error-message {
+  position: fixed; /* Para que flote por encima del contenido */
+  top: 30%; /* Mostrarlo cerca de la parte superior */
+  left: 50%;
+  transform: translateX(-50%); /* Centrarlo horizontalmente */
+  background-color: rgba(220, 53, 69, 0.8); /* Fondo rojo semi-transparente (color de Bootstrap para error) */
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  z-index: 1000; /* Asegurar que esté por encima de otros elementos */
+  opacity: 1;
+  transition: opacity 2.5s ease-in-out;
+}
+
+/* Opcional: para que desaparezca después de un tiempo */
+.error-message.fade-out {
+  opacity: 0;
+}

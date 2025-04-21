@@ -6,6 +6,7 @@ import Contacto from './Contacto'
 import Animacion from './Animancion'
 import Banner from '../img/alfa.png'
 import Banner2 from '../img/banner1.jpg';
+import Banner1 from '../img/triton.png'
 
 // Datos de ejemplo de los proyectos (puedes mover esto a un archivo separado)
 const projectsData = [
@@ -18,7 +19,7 @@ const projectsData = [
   {
     title: 'Military Clothing web Platform',
     description: 'A specialized digital platform designed to showcase and communicate a companys capabilities in the production of high-quality tactical clothing and military uniforms. Its primary objective is to connect with key clients such as government defense agencies, armed forces, law enforcement agencies, military contractors, and specialized distributors.',
-    image: Banner2, // Reemplaza con la ruta de tu imagen
+    image: Banner1, // Reemplaza con la ruta de tu imagen
     url : 'https://triton-blue.vercel.app/'
   },
   {
