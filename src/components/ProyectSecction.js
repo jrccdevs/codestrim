@@ -57,7 +57,7 @@ function ProjectsSection({ darkMode }) {
 
       <section className={`projects-section ${darkMode ? 'dark' : ''}`}>
         <h2>Contact</h2>
-        <div className="pro-containers">
+        <div className="pro-containers" style={{marginTop: '0'}}>
  
             <Contacto darkMode={darkMode} />
  
