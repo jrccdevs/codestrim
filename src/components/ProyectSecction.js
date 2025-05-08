@@ -6,7 +6,7 @@ import Contacto from './Contacto'
 import Animacion from './Animancion'
 import Banner from '../img/alfa.png'
 import Banner2 from '../img/banner1.jpg';
-import Banner1 from '../img/triton.png'
+import Banner1 from '../img/triton1.png'
 
 // Datos de ejemplo de los proyectos (puedes mover esto a un archivo separado)
 const projectsData = [

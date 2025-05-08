@@ -60,13 +60,9 @@ function Contacto({ darkMode }) {
             <div>
               <h3>Dirección:</h3>
               <p> La Paz - Bolivia</p>
-            </div>
             
-            <div>
-              <h3>Correo Electrónico:</h3>
+            <h3>Correo Electrónico:</h3>
               <p>reynaldocalani80@tgmail.com</p>
-            </div>
-            <div>
               <h3>Redes Sociales:</h3>
               <div className="redes-sociales-links">
                <a href={facebookLink} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
@@ -124,6 +120,7 @@ function Contacto({ darkMode }) {
                 <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="whatsapp-button-small">
                   <FaWhatsapp size={20} /> Chatear en WhatsApp
                 </a>
+               
               </div>
             </div>
           )}

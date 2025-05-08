@@ -124,7 +124,7 @@ function SingleTutorial() {
       </div>
 
       <div className="lesson-content">
-        <h2 className="title">{currentLesson.title}</h2>
+        <h1 className="title" >{currentLesson.title}</h1>
         <p>{currentLesson.description}</p>
 
         {currentLesson.example && (
@@ -134,7 +134,7 @@ function SingleTutorial() {
               onChange={handleCodeChange}
               placeholder={currentLesson.example}
             />
-            <button onClick={handleRunCode}>Ejecutar</button>
+            <button className="btn-ejecutar"onClick={handleRunCode}>Ejecutar</button>
           </div>
         )}
 

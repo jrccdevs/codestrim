@@ -9,12 +9,7 @@
   .single-tutorial-container h1{
     color: #000;
   }
-  .title{
-      color: #0e3b6b;
-  }
-  span{
-      
-  }
+  
   .lesson-navigation {
     display: flex;
     justify-content: space-between;
@@ -35,7 +30,11 @@
     background-color: #ccc;
     cursor: not-allowed;
   }
-  
+  .lesson-content .title {
+    text-transform: uppercase;
+    text-align: center;
+    color: #000;
+  }
   .lesson-content h2 {
     font-size: 2em;
     margin-bottom: 15px;
@@ -64,19 +63,19 @@
     min-height: 100px;
   }
   
-  .code-editor button {
+  .code-editor .btn-ejecutar {
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
-    background-color: #28a745;
+    background-color: #0b40a1;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-top: 10px;
   }
   
-  .code-editor button:hover {
-    background-color: #1e7e34;
+  .code-editor .btn-ejecutar:hover {
+    background-color: #1b499e;
   }
   
   .output-area {
