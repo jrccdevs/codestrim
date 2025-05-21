@@ -4,6 +4,8 @@ import PerfilLight from '../img/perfil3.png'; // Imagen para modo claro
 import PerfilDark from '../img/perfil2.png'; // Imagen para modo oscuro
 import Fondo from '../img/fondo.png';
 import { BsSunFill, BsMoonFill } from 'react-icons/bs';
+import { FaCommentDots, FaWhatsapp,FaEnvelope, FaFacebook, FaLinkedin } from 'react-icons/fa'; // Importa el icono de WhatsApp
+
 
 function Header({ onToggleDarkMode, darkMode }) {
 
@@ -71,7 +73,9 @@ function Header({ onToggleDarkMode, darkMode }) {
 
   // Determina qué imagen usar según el modo
   const profileImageSource = darkMode ? PerfilDark : PerfilLight;
-
+  const facebookLink = 'https://facebook.com/tunegocio'; // Reemplaza con tu enlace de Facebook
+  const linkedinLink = 'https://linkedin.com/company/tunegocio'; // Reemplaza con tu enlace de LinkedIn
+  
   return (
     <header className={`header ${darkMode ? 'header-dark' : ''}`} >
      {particles.map(particle => (
@@ -120,8 +124,24 @@ function Header({ onToggleDarkMode, darkMode }) {
               </span>
             </label>
           </div>
+          <div className="redes-sociales-links">
+           
+               <a href={facebookLink} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                  <FaFacebook size={24} />
+                </a>
+                <a href="https://wa.me/59175824357" target="_blank" rel="noopener noreferrer" title="WhatsApp">
+                  <FaWhatsapp />
+                </a>
+                <a href={linkedinLink} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                  <FaLinkedin size={24} />
+                </a> 
+                <a href="mailto:reynaldocalani80@gmail.com" target="_blank" rel="noopener noreferrer" title="Correo electrónico">
+                   <FaEnvelope />
+                </a>
+              </div>
         </div>
       </div>
+            
     </header>
   );
 }

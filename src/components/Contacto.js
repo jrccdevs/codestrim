@@ -53,10 +53,10 @@ function Contacto({ darkMode }) {
   return (
     <section id="contacto" className={`contacto-seccion ${darkMode ? 'dark' : ''}`}>
       <div className="contacto-grid">
-        <div className="contacto-info">
+        {/*<div className="contacto-info">
           
           {/*<p>¡No dudes en ponerte en contacto con nosotros!</p>*/}
-          <div className="informacion-contacto">
+         {/* <div className="informacion-contacto">
             <div>
               <h3>Dirección:</h3>
               <p> La Paz - Bolivia</p>
@@ -73,15 +73,15 @@ function Contacto({ darkMode }) {
                 </a> 
               </div>
             </div>
-          </div>
+          </div>*/}
           {/* Enlace para continuar en WhatsApp */}
-          <div className="whatsapp-link-container">
+          {/*<div className="whatsapp-link-container">
             <p>¿Necesitas asistencia más personalizada?</p>
             <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="whatsapp-button">
               <FaWhatsapp size={24} /> Continuar en WhatsApp
             </a>
-          </div>
-        </div>
+            </div>*/}
+        {/*</div>*/}
 
         <div className="chatbot-container">
           {/* Chatbot Icon */}
