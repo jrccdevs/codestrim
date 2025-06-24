@@ -1,7 +1,7 @@
 import React from 'react';
 import '../css/projects-section.css';
 import ProjectCard from './ProyectCard';
-import SkillsSecction from './SkillsSection';
+import SkillsSecction from './Lenguajes';
 import Contacto from './Contacto'
 import Animacion from './Animancion'
 import Banner from '../img/alfa.png'
@@ -31,7 +31,7 @@ const projectsData = [
   // Puedes añadir más proyectos aquí
 ];
 
-function ProjectsSection({ darkMode }) {
+function ProjectsSection({ darkMode, skills }) {
     return (
       <>
       <Animacion />
@@ -47,19 +47,14 @@ function ProjectsSection({ darkMode }) {
         </div>
       </section>
       <section className={`projects-section ${darkMode ? 'dark' : ''}`}>
-        <h2>Skills</h2>
+        <h2>Guia de Aprendisaje</h2>
         <div className="projects-containers">
  
-            <SkillsSecction darkMode={darkMode} />
+            <SkillsSecction darkMode={darkMode} skills={skills}/>
  
         </div>
       </section>
-
-     
             <Contacto darkMode={darkMode} />
- 
-       
-      
       </>
     );
   }

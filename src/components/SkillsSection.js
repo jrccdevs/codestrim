@@ -7,11 +7,12 @@ import Node from '../img/node.png'
 import Js from '../img/js.png'
 import Tutorial from './Tutorial'
 import Modal from './Modal'
+import Lesson from '../pages/HomePage'
 
 
   const skills = [
     { name: 'JavaScript', icon: Js, description: 'Lenguaje fundamental para el desarrollo web...', level: 90, url: Tutorial },
-    { name: 'React.js', icon: Rea, description: 'Librería para construir interfaces de usuario...', level: 85 },
+    { name: 'React.js', icon: Rea, description: 'Librería para construir interfaces de usuario...', level: 85, url: Lesson },
     { name: 'Node.js', icon: Node, description: 'Entorno de ejecución para JavaScript en el servidor...', level: 80 },
     { name: 'Python', icon: Python, description: 'Lenguaje versátil para desarrollo web, ciencia de datos...', level: 75 },
  //   { name: 'HTML5', icon: 'html5.svg', description: 'Lenguaje de marcado para la estructura web...', level: 95 },
@@ -54,7 +55,6 @@ const SkillCard = ({ skill, onOpenModal }) => {
     
     <div className="skill-card">
       <div className="skill-icon">
-        
         <img src={skill.icon} onClick={() => onOpenModal(skill)} style={{ cursor: 'pointer' }} alt={skill.name} />
        
       </div>

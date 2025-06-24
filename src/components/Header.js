@@ -97,8 +97,9 @@ function Header({ onToggleDarkMode, darkMode }) {
         src={Fondo}
         alt="fondo"
         className="header-background-image"
+        loading="lazy"
       />
-      <img src={profileImageSource} alt="Tu foto de perfil" className="profile-image" />
+      <img src={profileImageSource} alt="Tu foto de perfil" className="profile-image"loading="lazy" />
       <div className="intro">
         <h1>Hi, I'm Julio</h1>
         <h2>Fullstack Developer</h2>

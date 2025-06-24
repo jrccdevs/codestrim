@@ -8,7 +8,7 @@ function ProjectCard({ project, darkMode }) {
     <div className={`project-card ${darkMode ? 'dark' : ''}`}>
       <div className="project-image-container">
       <a href={project.url} target="_blank" rel="noopener noreferrer">
-          <img src={project.image} alt={project.title} className="project-image" />
+          <img src={project.image} alt={project.title} className="project-image" loading="lazy"/>
         </a>
       </div>
       <div className="project-info">

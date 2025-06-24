@@ -1,24 +1,28 @@
 import React, { useState } from 'react';
-import Header from './components/Header.js';
-import './App.css'; // Si decides mantener este archivo
-import ProjectsSection from './components/ProyectSecction';
-import SkillsSecctions from './components/Contacto'
-import Animacion from './components/Animancion'
+import { Routes, Route } from 'react-router-dom';
+
+import './App.css';
+import Inicio from './components/inicio';
+
+import HomePage from './pages/HomePage';
+
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
+  const toggleDarkMode = () => setDarkMode(!darkMode);
+
+  
 
   return (
     <div className={`App ${darkMode ? 'dark' : ''}`}>
-      <Animacion />
-      <Header onToggleDarkMode={toggleDarkMode} darkMode={darkMode} />
-      <ProjectsSection darkMode={darkMode} /> {/* Pasa el prop darkMode */}
       
-      {/* Aquí irán las demás secciones */}
+      <Routes>
+        <Route path="/" element={<Inicio darkMode={darkMode}/>} />
+        
+        <Route path="/HomePage" element={<HomePage darkMode={darkMode}/>} />
+        
+      </Routes>
     </div>
   );
 }
