@@ -14,9 +14,10 @@ import { createTheme } from '@mui/material/styles';
 
 const skills = [
   { name: 'JavaScript', icon: Js, url: '/HomePage', level: 90 },
+  { name: 'Python', icon: Python, url: '/Guia-Python', level: 75 },
   { name: 'React.js', icon: Rea, url: '/Lesson', level: 85 },
-  { name: 'Node.js', icon: Node, level: 80 },
-  { name: 'Python', icon: Python, level: 75 }
+  { name: 'Node.js', icon: Node, level: 80 }
+  
 ];
 
 const theme = createTheme({

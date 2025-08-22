@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 
 import './App.css';
 import Inicio from './components/inicio';
-
+import PythonPage from './pages/PythonPage';
 import HomePage from './pages/HomePage';
 
 
@@ -21,7 +21,7 @@ function App() {
         <Route path="/" element={<Inicio darkMode={darkMode}/>} />
         
         <Route path="/HomePage" element={<HomePage darkMode={darkMode}/>} />
-        
+        <Route path="/Guia-Python" element={<PythonPage darkMode={darkMode}/>} />
       </Routes>
     </div>
   );

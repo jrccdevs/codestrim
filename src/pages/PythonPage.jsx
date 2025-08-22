@@ -9,13 +9,13 @@ import MenuIcon from '@mui/icons-material/Menu';
 import BookIcon from '@mui/icons-material/Book';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import DarkModeToggle from '../components/DarkModeToggle'
-import { lessons } from '../data/index.js';
-import DynamicBanner from '../components/CursoJavascript/DynamicBanner';
+import { lessonsPython } from '../data/index.js';
+import DynamicBanner from '../components/CursoPython/DynamicBanner';
 import LessonContent from '../components/CursoJavascript/LessonContent';
 
 const drawerWidth = 240;
 
-function HomePage() {
+function PythonPage() {
 
   const [darkMode, setDarkMode] = useState(false);
 
@@ -29,8 +29,8 @@ function HomePage() {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   useEffect(() => {
-    if (lessons.length > 0 && !selectedLesson) {
-      setSelectedLesson(lessons[0]);
+    if (lessonsPython.length > 0 && !selectedLesson) {
+      setSelectedLesson(lessonsPython[0]);
     }
   }, [selectedLesson]);
 
@@ -43,14 +43,13 @@ function HomePage() {
   };
 
   const handleLessonSelect = (lessonId) => {
-    const lesson = lessons.find(l => l.id === lessonId);
+    const lesson = lessonsPython.find(l => l.id === lessonId);
     setSelectedLesson(lesson);
     if (isMobile) setMobileOpen(false);
   };
 
   const drawerContent = (
     <Box sx={{ height: '100%' }} className={`${darkMode ? 'header-dark' : ''}`}>
-     <Box style={{backgroundColor:'rgb(33, 69, 110)'}}>
       <Toolbar sx={{ justifyContent: 'flex-end', px: 1 }}>
         <IconButton onClick={toggleDrawer}>
           <ChevronLeftIcon />
@@ -58,7 +57,7 @@ function HomePage() {
       </Toolbar>
       <Divider />
       <List>
-        {lessons.map((lesson) => (
+        {lessonsPython.map((lesson) => (
           <ListItem
             key={lesson.id}
             disablePadding
@@ -73,7 +72,6 @@ function HomePage() {
           </ListItem>
         ))}
       </List>
-      </Box>
     </Box>
   );
 
@@ -95,7 +93,7 @@ function HomePage() {
           }),
         }}
       >
-        <Toolbar  className={`${darkMode ? 'header-dark' : ''}`}>
+        <Toolbar className={`${darkMode ? 'header-dark' : ''}`}>
           <IconButton
             color="inherit"
             edge="start"
@@ -167,4 +165,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default PythonPage;

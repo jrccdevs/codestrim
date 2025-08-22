@@ -8,6 +8,7 @@ import arrays from './lessons/arrays';       // <-- Nueva importación
 import objetos from './lessons/objetos';     // <-- Nueva importación
 import domManipulacion from './lessons/domManipulacion'; // <-- Nueva importación
 
+import arraysPython from './python/arrays';
 const lessons = [
   introProgramacion,
   variablesTiposDatos,
@@ -18,4 +19,8 @@ const lessons = [
   domManipulacion,    // <-- Añadir al array
 ];
 
-export default lessons;
+const lessonsPython = [
+  arraysPython
+];
+
+export {lessons, lessonsPython};
